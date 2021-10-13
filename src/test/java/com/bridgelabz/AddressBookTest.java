@@ -15,4 +15,11 @@ public class AddressBookTest {
         Assertions.assertEquals(6, res);
     }
 
+    @Test
+    public void ifData_WhenUpdated_ShouldReturnSize() throws SQLException {
+        addressBookService = new AddressBookService();
+        boolean res = addressBookService.getUpdate("Heema", "Jetty", "heema123@gmail.com");
+        Assertions.assertEquals(true, res);
+
+    }
 }
